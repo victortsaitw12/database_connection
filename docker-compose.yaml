@@ -19,6 +19,8 @@ services:
   grafana:
     build: .
     command: ping elasticsearch
+    volumes:
+      - ./src:/src
     ports:
       - 3000:3000
     depends_on:

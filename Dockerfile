@@ -48,4 +48,8 @@ RUN dpkg -i grafana_5.1.4_amd64.deb
 RUN grafana-cli plugins install grafana-simple-json-datasource
 RUN grafana-cli plugins install grafana-piechart-panel
 
+# mysql-client
 RUN apt-get install -y mysql-client
+# elasticsearch
+RUN pip install elasticsearch
+RUN service grafana-server start

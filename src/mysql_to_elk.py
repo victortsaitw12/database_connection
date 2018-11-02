@@ -1,4 +1,5 @@
 import pymysql
+from elasticsearch import Elasticsearch
 
 conn = pymysql.connect(host='10.149.7.17', port=3306, user='nwe', passwd='nwe1234', db='mes_db')
 
