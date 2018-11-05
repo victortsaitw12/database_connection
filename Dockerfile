@@ -41,6 +41,9 @@ RUN pip install pymysql
 
 #Django
 RUN pip install django
+# YAML
+RUN pip install pyyaml
+
 # Grafana
 RUN wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_5.1.4_amd64.deb
 RUN apt-get install -y adduser libfontconfig
@@ -50,6 +53,9 @@ RUN grafana-cli plugins install grafana-piechart-panel
 
 # mysql-client
 RUN apt-get install -y mysql-client
+
 # elasticsearch
 RUN pip install elasticsearch
 RUN service grafana-server start
+
+
